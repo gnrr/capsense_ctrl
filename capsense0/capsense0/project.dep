@@ -2,31 +2,31 @@
 ./obj/boot.o : \
    C:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
    C:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C21~1/m8ssc.inc\
-   C:\Users\g\DOCUME~1\test\psoc\CAPSEN~1\CAPSEN~1\CAPSEN~1\lib\GLOBAL~1.INC\
-   C:\Users\g\DOCUME~1\test\psoc\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
+   C:\Users\g\Desktop\CAPSEN~1\CAPSEN~1\CAPSEN~1\lib\GLOBAL~1.INC\
+   C:\Users\g\Desktop\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
 ./obj/main.o :  ./lib/CSD_1.h ./lib/PSoCAPI.h ./lib/PSOCGP~1.H\
    ./lib/PWM8_1.h\
    C:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C21~1/m8c.h
 ./lib/obj/csd_1.o :  ./lib/CSD_1.inc ./lib/GLOBAL~1.INC\
    C:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
-   C:\Users\g\DOCUME~1\test\psoc\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
+   C:\Users\g\Desktop\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
 ./lib/obj/csd_1hl.o :  ./lib/CSD_1.inc\
    C:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
-   C:\Users\g\DOCUME~1\test\psoc\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
+   C:\Users\g\Desktop\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
 ./lib/obj/csd_1int.o : \
    C:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
-   C:\Users\g\DOCUME~1\test\psoc\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
+   C:\Users\g\Desktop\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
 ./lib/obj/csd_1table.o :  ./lib/CSD_1.inc\
    C:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
-   C:\Users\g\DOCUME~1\test\psoc\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
+   C:\Users\g\Desktop\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
 ./lib/obj/psocconfig.o :  ./lib/GLOBAL~1.INC\
    C:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
-   C:\Users\g\DOCUME~1\test\psoc\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
+   C:\Users\g\Desktop\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
 ./lib/obj/psocconfigtbl.o : \
    C:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc
 ./lib/obj/pwm8_1.o :  ./lib/PWM8_1.inc\
    C:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
-   C:\Users\g\DOCUME~1\test\psoc\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
+   C:\Users\g\Desktop\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
 ./lib/obj/pwm8_1int.o :  ./lib/PWM8_1.inc\
    C:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/include/CY8C21~1/m8c.inc\
-   C:\Users\g\DOCUME~1\test\psoc\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
+   C:\Users\g\Desktop\CAPSEN~1\CAPSEN~1\CAPSEN~1\memory.inc
