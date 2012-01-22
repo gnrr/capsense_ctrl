@@ -1,0 +1,6 @@
+-F0x30 -g -blit:0x170.0x1fff 
+ -bdata:0.0x100 -rwh:SSCParmBlk:0x00F7.0x00FF -BInterruptRAM:0 -Bvirtual_registers  
+ -Bcapsense0_RAM 
+ -o"output/capsense0" 
+ ./obj/main.o  
+ C:/Users/g/DOCUME~1/test/psoc/CAPSEN~1/CAPSEN~1/CAPSEN~1/lib/libPSoc.a -LC:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/lib/LMM/eightpages C:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/lib/CY8C21030/cms.a C:/PROGRA~2/Cypress/PSOCDE~1/5.2/Common/CY110F~1/tools/lib/LMM/UASW/NoMAC/arith.a  
