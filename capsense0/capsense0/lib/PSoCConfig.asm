@@ -24,6 +24,8 @@ export LoadConfigInit
 export _LoadConfigInit
 export LoadConfig_capsense0
 export _LoadConfig_capsense0
+export Port_0_Data_SHADE
+export _Port_0_Data_SHADE
 export Port_2_Data_SHADE
 export _Port_2_Data_SHADE
 
@@ -58,6 +60,7 @@ _LoadConfigInit:
  LoadConfigInit:
     RAM_PROLOGUE RAM_USE_CLASS_4
     
+	mov		[Port_0_Data_SHADE], 4h
 	mov		[Port_2_Data_SHADE], 0h
 
 	lcall	LoadConfig_capsense0
@@ -182,6 +185,8 @@ AREA InterruptRAM(ram, rel)
 NO_SHADOW:
 _NO_SHADOW:
 ; write only register shadows
+_Port_0_Data_SHADE:
+Port_0_Data_SHADE:	BLK	1
 _Port_2_Data_SHADE:
 Port_2_Data_SHADE:	BLK	1
 

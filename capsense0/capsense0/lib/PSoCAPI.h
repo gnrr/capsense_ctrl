@@ -6,6 +6,5 @@
 
 #include "PSoCGPIOINT.h"
 #include "CSD_1.h"
-#include "PWM8_1.h"
 
 #endif

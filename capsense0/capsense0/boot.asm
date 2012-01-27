@@ -120,7 +120,7 @@ ENDIF
     reti
 
     org   1Ch                      ;GPIO Interrupt Vector
-    // call	void_handler
+    ljmp	PSoC_GPIO_ISR
     reti
 
     org   20h                      ;PSoC Block DBB00 Interrupt Vector
@@ -136,7 +136,7 @@ ENDIF
     reti
 
     org   2Ch                      ;PSoC Block DCB03 Interrupt Vector
-    ljmp	_PWM8_1_ISR
+    // call	void_handler
     reti
 
     org   60h                      ;PSoC I2C Interrupt Vector
