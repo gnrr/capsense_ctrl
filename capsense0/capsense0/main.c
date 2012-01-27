@@ -5,7 +5,6 @@
 #include <m8c.h>        // part specific constants and macros
 #include "PSoCAPI.h"    // PSoC API definitions for all User Modules
 
-
 BYTE out_p1;
 
 void main(void)
@@ -32,17 +31,6 @@ void main(void)
 			val_p1 |= 0x40;  // SENSEOUT HI (Hi-Z)
 		}
 		out_p1 = val_p1;
-		
-#if 0 // shadow regs sample
-		if(CSD_1_bIsSensorActive(0)) {
-				PRT1DR |= 0x04;  			// BLUE HI
-//				Port_0_Data_SHADE &= ~0x01; // SENSEOUT LO
-		} else {
-				PRT1DR &= ~0x04; 			// BLUE LO
-//				Port_0_Data_SHADE |= 0x01;  // SENSEOUT HI
-		}
-//		PRT0DR = Port_0_Data_SHADE;
-#endif		
 	}
 }
 
