@@ -38,6 +38,30 @@ BYTE			Port_0_2_MUXBusCtrl_ADDR;
 //   Port_0_2_DataShadow define
 extern unsigned char Port_0_Data_SHADE;
 #define Port_0_2_DataShadow (*(unsigned char*)&Port_0_Data_SHADE)
+// Port_0_3 address and mask defines
+#pragma	ioport	Port_0_3_Data_ADDR:	0x0
+BYTE			Port_0_3_Data_ADDR;
+#pragma	ioport	Port_0_3_DriveMode_0_ADDR:	0x100
+BYTE			Port_0_3_DriveMode_0_ADDR;
+#pragma	ioport	Port_0_3_DriveMode_1_ADDR:	0x101
+BYTE			Port_0_3_DriveMode_1_ADDR;
+#pragma	ioport	Port_0_3_DriveMode_2_ADDR:	0x3
+BYTE			Port_0_3_DriveMode_2_ADDR;
+#pragma	ioport	Port_0_3_GlobalSelect_ADDR:	0x2
+BYTE			Port_0_3_GlobalSelect_ADDR;
+#pragma	ioport	Port_0_3_IntCtrl_0_ADDR:	0x102
+BYTE			Port_0_3_IntCtrl_0_ADDR;
+#pragma	ioport	Port_0_3_IntCtrl_1_ADDR:	0x103
+BYTE			Port_0_3_IntCtrl_1_ADDR;
+#pragma	ioport	Port_0_3_IntEn_ADDR:	0x1
+BYTE			Port_0_3_IntEn_ADDR;
+#define Port_0_3_MASK 0x8
+#pragma	ioport	Port_0_3_MUXBusCtrl_ADDR:	0x1d8
+BYTE			Port_0_3_MUXBusCtrl_ADDR;
+// Port_0_3 Shadow defines
+//   Port_0_3_DataShadow define
+extern unsigned char Port_0_Data_SHADE;
+#define Port_0_3_DataShadow (*(unsigned char*)&Port_0_Data_SHADE)
 // CSD_1Capacitor address and mask defines
 #pragma	ioport	CSD_1Capacitor_Data_ADDR:	0x0
 BYTE			CSD_1Capacitor_Data_ADDR;
@@ -86,6 +110,30 @@ BYTE			CSD_1SW0_MUXBusCtrl_ADDR;
 //   CSD_1SW0_DataShadow define
 extern BYTE Port_2_Data_SHADE;
 #define CSD_1SW0_DataShadow (*(unsigned char*)&Port_2_Data_SHADE)
+// CSD_1SW1 address and mask defines
+#pragma	ioport	CSD_1SW1_Data_ADDR:	0x8
+BYTE			CSD_1SW1_Data_ADDR;
+#pragma	ioport	CSD_1SW1_DriveMode_0_ADDR:	0x108
+BYTE			CSD_1SW1_DriveMode_0_ADDR;
+#pragma	ioport	CSD_1SW1_DriveMode_1_ADDR:	0x109
+BYTE			CSD_1SW1_DriveMode_1_ADDR;
+#pragma	ioport	CSD_1SW1_DriveMode_2_ADDR:	0xb
+BYTE			CSD_1SW1_DriveMode_2_ADDR;
+#pragma	ioport	CSD_1SW1_GlobalSelect_ADDR:	0xa
+BYTE			CSD_1SW1_GlobalSelect_ADDR;
+#pragma	ioport	CSD_1SW1_IntCtrl_0_ADDR:	0x10a
+BYTE			CSD_1SW1_IntCtrl_0_ADDR;
+#pragma	ioport	CSD_1SW1_IntCtrl_1_ADDR:	0x10b
+BYTE			CSD_1SW1_IntCtrl_1_ADDR;
+#pragma	ioport	CSD_1SW1_IntEn_ADDR:	0x9
+BYTE			CSD_1SW1_IntEn_ADDR;
+#define CSD_1SW1_MASK 0x2
+#pragma	ioport	CSD_1SW1_MUXBusCtrl_ADDR:	0x1da
+BYTE			CSD_1SW1_MUXBusCtrl_ADDR;
+// CSD_1SW1 Shadow defines
+//   CSD_1SW1_DataShadow define
+extern BYTE Port_2_Data_SHADE;
+#define CSD_1SW1_DataShadow (*(unsigned char*)&Port_2_Data_SHADE)
 // CSD_1Resistor address and mask defines
 #pragma	ioport	CSD_1Resistor_Data_ADDR:	0xc
 BYTE			CSD_1Resistor_Data_ADDR;

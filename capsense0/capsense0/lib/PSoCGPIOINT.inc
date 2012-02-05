@@ -43,6 +43,36 @@ macro ClearPort_0_2_Data
 	mov		reg[Port_0_2_Data_ADDR], a
 endm
 
+; Port_0_3 address and mask equates
+Port_0_3_Data_ADDR:	equ	0h
+Port_0_3_DriveMode_0_ADDR:	equ	100h
+Port_0_3_DriveMode_1_ADDR:	equ	101h
+Port_0_3_DriveMode_2_ADDR:	equ	3h
+Port_0_3_GlobalSelect_ADDR:	equ	2h
+Port_0_3_IntCtrl_0_ADDR:	equ	102h
+Port_0_3_IntCtrl_1_ADDR:	equ	103h
+Port_0_3_IntEn_ADDR:	equ	1h
+Port_0_3_MASK:	equ	8h
+Port_0_3_MUXBusCtrl_ADDR:	equ	1d8h
+; Port_0_3_Data access macros
+;   GetPort_0_3_Data macro, return in a
+macro GetPort_0_3_Data
+	mov		a,[Port_0_Data_SHADE]
+	and		a, 8h
+endm
+;   SetPort_0_3_Data macro
+macro SetPort_0_3_Data
+	or		[Port_0_Data_SHADE], 8h
+	mov		a, [Port_0_Data_SHADE]
+	mov		reg[Port_0_3_Data_ADDR], a
+endm
+;   ClearPort_0_3_Data macro
+macro ClearPort_0_3_Data
+	and		[Port_0_Data_SHADE], ~8h
+	mov		a, [Port_0_Data_SHADE]
+	mov		reg[Port_0_3_Data_ADDR], a
+endm
+
 ; CSD_1Capacitor address and mask equates
 CSD_1Capacitor_Data_ADDR:	equ	0h
 CSD_1Capacitor_DriveMode_0_ADDR:	equ	100h
@@ -101,6 +131,36 @@ macro ClearCSD_1SW0_Data
 	and		[Port_2_Data_SHADE], ~1h
 	mov		a, [Port_2_Data_SHADE]
 	mov		reg[CSD_1SW0_Data_ADDR], a
+endm
+
+; CSD_1SW1 address and mask equates
+CSD_1SW1_Data_ADDR:	equ	8h
+CSD_1SW1_DriveMode_0_ADDR:	equ	108h
+CSD_1SW1_DriveMode_1_ADDR:	equ	109h
+CSD_1SW1_DriveMode_2_ADDR:	equ	bh
+CSD_1SW1_GlobalSelect_ADDR:	equ	ah
+CSD_1SW1_IntCtrl_0_ADDR:	equ	10ah
+CSD_1SW1_IntCtrl_1_ADDR:	equ	10bh
+CSD_1SW1_IntEn_ADDR:	equ	9h
+CSD_1SW1_MASK:	equ	2h
+CSD_1SW1_MUXBusCtrl_ADDR:	equ	1dah
+; CSD_1SW1_Data access macros
+;   GetCSD_1SW1_Data macro, return in a
+macro GetCSD_1SW1_Data
+	mov		a,[Port_2_Data_SHADE]
+	and		a, 2h
+endm
+;   SetCSD_1SW1_Data macro
+macro SetCSD_1SW1_Data
+	or		[Port_2_Data_SHADE], 2h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[CSD_1SW1_Data_ADDR], a
+endm
+;   ClearCSD_1SW1_Data macro
+macro ClearCSD_1SW1_Data
+	and		[Port_2_Data_SHADE], ~2h
+	mov		a, [Port_2_Data_SHADE]
+	mov		reg[CSD_1SW1_Data_ADDR], a
 endm
 
 ; CSD_1Resistor address and mask equates

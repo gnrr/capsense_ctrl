@@ -5,7 +5,8 @@
 #include <m8c.h>        // part specific constants and macros
 #include "PSoCAPI.h"    // PSoC API definitions for all User Modules
 
-BYTE out_p1;
+BYTE out_ctrl, out_shift;
+BYTE p0_old = 0xFF;
 
 void main(void)
 {
@@ -16,21 +17,27 @@ void main(void)
 	CSD_1_InitializeBaselines() ; //scan all sensors first time, init baseline
 	CSD_1_SetDefaultFingerThresholds() ; 
 
-	out_p1 = 0x40;
 	while(1) {
-		BYTE val_p1 = out_p1;
-
 		CSD_1_ScanAllSensors();
 		CSD_1_UpdateAllBaselines();
 
+		// CTRL:  P0_2 -> P1_6
 		if(CSD_1_bIsSensorActive(0)) {
-			val_p1 |= 0x04;  // BLUE LED HI (touch sw indicator)
-			val_p1 &= ~0x40; // SENSEOUT LO
+			out_ctrl = 0xB4;	// 1011_xxxx: CTRL SENSEOUT LO
+								// xxxx_0100: BLUE LED ON (touch sw indicator)
 		} else {
-			val_p1 &= ~0x04; // BLUE LED LO
-			val_p1 |= 0x40;  // SENSEOUT HI (Hi-Z)
+			out_ctrl = 0xF0;    // 1111_xxxx: CTRL SENSEOUT HI (Hi-Z)
+								//  ^
 		}
-		out_p1 = val_p1;
+
+		// SHIFT: P0_3 -> P1_7
+		if(CSD_1_bIsSensorActive(1)) {
+			out_shift = 0x78;	// 0111_xxxx: SHIFT SENSEOUT LO
+								// xxxx_1000: RED LED ON (touch sw indicator)
+		} else {
+			out_shift = 0xF0;   // 1111_xxxx: SHIFT SENSEOUT HI (Hi-Z)
+								// ^
+		}
 	}
 }
 
@@ -38,7 +45,19 @@ void main(void)
 #pragma interrupt_handler GPIO_INT
 void GPIO_INT(void)
 {
-	// P0_2: keyboard matrix drive signal (active-lo)
-	PRT1DR = (PRT0DR & 0x04)? 0x40 : out_p1;
+	// output keyboard matrix drive signal (active-lo)
+	BYTE p0, diff;
+	
+	p0 = PRT0DR;
+	diff = p0 ^ 0x0C;
+	
+	if(diff == 0x00) return;
+	
+	if(diff & 0x04)
+		PRT1DR = (p0 & 0x04)? 0xF0 : out_ctrl;
+	else if(diff & 0x08)
+		PRT1DR = (p0 & 0x08)? 0xF0 : out_shift;
+
+	p0_old = p0;
 }
 

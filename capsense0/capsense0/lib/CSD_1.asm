@@ -591,6 +591,7 @@ ENDIF
  CSD_1_Sensor_Table2:
 _CSD_1_Sensor_Table2:
 	dw	0x0201	// Port 2 Bit 0
+	dw	0x0202	// Port 2 Bit 1
 
 IF (CSD_1_TotalSensorCount)
 .ENDLITERAL

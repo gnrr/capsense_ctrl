@@ -53,11 +53,11 @@ CSD_1_MAX_RESOLUTION:                  equ 16
 ; Constants for CSD_1 API's
 ;--------------------------------------------------
 
-CSD_1_ButtonCount:                     equ 1h
+CSD_1_ButtonCount:                     equ 2h
 CSD_1_SliderCount:                     equ 0h  + 0h
-CSD_1_TotalSensorCount:                equ 1h
+CSD_1_TotalSensorCount:                equ 2h
 
-CSD_1_BUTTONS_EXIST:                   equ 1h
+CSD_1_BUTTONS_EXIST:                   equ 2h
 CSD_1_SLIDERS_EXIST:                   equ 0h | 0h
 
 CSD_1_HYSTERESIS:                                equ ah

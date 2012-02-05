@@ -86,28 +86,28 @@ LoadConfigTBL_capsense0_Bank1:
 	db		ddh, 00h		; OscillatorGlobalBusEnableControl register (OSC_GO_EN)
 	db		d8h, 02h		; Port_0_MUXBusCtrl register (MUX_CR0)
 	db		d9h, 00h		; Port_1_MUXBusCtrl register (MUX_CR1)
-	db		dah, 01h		; Port_2_MUXBusCtrl register (MUX_CR2)
+	db		dah, 03h		; Port_2_MUXBusCtrl register (MUX_CR2)
 	db		dbh, 00h		; Port_3_MUXBusCtrl register (MUX_CR3)
 	db		ffh
 AREA psoc_config(rom, rel)
 LoadConfigTBL_capsense0_Ordered:
 ;  Ordered Global Register values
 	M8C_SetBank0
-	mov	reg[00h], 04h		; Port_0_Data register (PRT0DR)
+	mov	reg[00h], 0ch		; Port_0_Data register (PRT0DR)
 	M8C_SetBank1
-	mov	reg[00h], 04h		; Port_0_DriveMode_0 register (PRT0DM0)
+	mov	reg[00h], 0ch		; Port_0_DriveMode_0 register (PRT0DM0)
 	mov	reg[01h], ffh		; Port_0_DriveMode_1 register (PRT0DM1)
 	M8C_SetBank0
-	mov	reg[03h], fbh		; Port_0_DriveMode_2 register (PRT0DM2)
+	mov	reg[03h], f3h		; Port_0_DriveMode_2 register (PRT0DM2)
 	mov	reg[02h], 00h		; Port_0_GlobalSelect register (PRT0GS)
 	M8C_SetBank1
-	mov	reg[02h], 04h		; Port_0_IntCtrl_0 register (PRT0IC0)
-	mov	reg[03h], 04h		; Port_0_IntCtrl_1 register (PRT0IC1)
+	mov	reg[02h], 0ch		; Port_0_IntCtrl_0 register (PRT0IC0)
+	mov	reg[03h], 0ch		; Port_0_IntCtrl_1 register (PRT0IC1)
 	M8C_SetBank0
-	mov	reg[01h], 04h		; Port_0_IntEn register (PRT0IE)
-	mov	reg[04h], 40h		; Port_1_Data register (PRT1DR)
+	mov	reg[01h], 0ch		; Port_0_IntEn register (PRT0IE)
+	mov	reg[04h], c0h		; Port_1_Data register (PRT1DR)
 	M8C_SetBank1
-	mov	reg[04h], 4ch		; Port_1_DriveMode_0 register (PRT1DM0)
+	mov	reg[04h], cch		; Port_1_DriveMode_0 register (PRT1DM0)
 	mov	reg[05h], f3h		; Port_1_DriveMode_1 register (PRT1DM1)
 	M8C_SetBank0
 	mov	reg[07h], f3h		; Port_1_DriveMode_2 register (PRT1DM2)
@@ -129,7 +129,7 @@ LoadConfigTBL_capsense0_Ordered:
 	mov	reg[0bh], 00h		; Port_2_IntCtrl_1 register (PRT2IC1)
 	M8C_SetBank0
 	mov	reg[09h], 00h		; Port_2_IntEn register (PRT2IE)
-	mov	reg[0ch], 02h		; Port_3_Data register (PRT3DR)
+	mov	reg[0ch], 00h		; Port_3_Data register (PRT3DR)
 	M8C_SetBank1
 	mov	reg[0ch], 02h		; Port_3_DriveMode_0 register (PRT3DM0)
 	mov	reg[0dh], 0fh		; Port_3_DriveMode_1 register (PRT3DM1)

@@ -60,7 +60,7 @@ _LoadConfigInit:
  LoadConfigInit:
     RAM_PROLOGUE RAM_USE_CLASS_4
     
-	mov		[Port_0_Data_SHADE], 4h
+	mov		[Port_0_Data_SHADE], ch
 	mov		[Port_2_Data_SHADE], 0h
 
 	lcall	LoadConfig_capsense0

@@ -18,11 +18,11 @@
 // Constants for CSD_1
 //--------------------------------------------------
 
-#define CSD_1_TotalSensorCount                    0x1
-#define CSD_1_ButtonCount                         0x1
+#define CSD_1_TotalSensorCount                    0x2
+#define CSD_1_ButtonCount                         0x2
 #define CSD_1_SliderCount                         0x0 + 0x0
 
-#define CSD_1_BUTTONS_EXIST                       0x1
+#define CSD_1_BUTTONS_EXIST                       0x2
 #define CSD_1_SLIDERS_EXIST                       0x0 | 0x0
 
 //--------------------------------------------------

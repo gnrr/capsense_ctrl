@@ -36,10 +36,11 @@ AREA UserModules (ROM, REL, CON)
 ; The Sensor Table consists of two bytes for each sensor.  The first byte is the
 ; port number and the second is the bit mask for the bit not to be confused with
 ; the bit number.  For example an entry for port 2 bit 3 (P2[3])  would be
-; "dw 0x0208".  This table consist of 0x1 sensors.
+; "dw 0x0208".  This table consist of 0x2 sensors.
  CSD_1_Sensor_Table:
 _CSD_1_Sensor_Table:
 	dw	0x0201	// Port 2 Bit 0
+	dw	0x0202	// Port 2 Bit 1
 
 
 ;-----------------------------------------------------------------------------
@@ -89,7 +90,7 @@ _CSD_1_Sensor_Table:
 _CSD_1_Group_Table:
 ; Group Table:
 ;    Origin    Count    Diplex?    DivBtwSw(wholeMSB, wholeLSB, fractByte)
- db   0x0,      0x01,	 0x00,	 0x00,	 0x00,	 0x00 ; Buttons
+ db   0x0,      0x02,	 0x00,	 0x00,	 0x00,	 0x00 ; Buttons
 
 
 ;-----------------------------------------------------------------------------
