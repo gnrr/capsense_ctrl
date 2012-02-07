@@ -37,8 +37,8 @@
 //--------------------------------------------------
 // Constants for Thresholds values
 //--------------------------------------------------
-#define CSD_1_FINGER_THRESHOLD                    0x50
-#define CSD_1_NOISE_THRESHOLD                     0x32
+#define CSD_1_FINGER_THRESHOLD                    0x41
+#define CSD_1_NOISE_THRESHOLD                     0x2d
 #define CSD_1_BASELINE_UPDATE_THRESHOLD           0xc8
 #define CSD_1_HYSTERESIS                          0xa
 

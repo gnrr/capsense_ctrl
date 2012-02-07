@@ -6,7 +6,6 @@
 #include "PSoCAPI.h"    // PSoC API definitions for all User Modules
 
 BYTE out_ctrl, out_shift, out_led;
-BYTE p0_old;
 
 void main(void)
 {
@@ -17,9 +16,6 @@ void main(void)
 	CSD_1_InitializeBaselines() ; //scan all sensors first time, init baseline
 	CSD_1_SetDefaultFingerThresholds() ; 
 
-//PRT1DR = 0x00;
-//PRT1DR = 0x80;
-//	PRT1DR = 0xC0;
 	while(1) {
 		BYTE ctrl, shift, led;
 		CSD_1_ScanAllSensors();
@@ -45,18 +41,18 @@ void main(void)
 
 		out_ctrl = ctrl;
 		out_shift = shift;
-		PRT1DR = (PRT1DR & 0xC0) | led;
+//		PRT1DR = (PRT1DR & 0xC0) | led;  // this line occurs mulfunction when typing '-' or '[' !!!
 	}
 }
 
+BYTE p0, p0_old, diff;
 
 #pragma interrupt_handler GPIO_INT
 void GPIO_INT(void)
 {
 	// output keyboard matrix drive signal (active-lo)
-	BYTE p0, diff;
 	
-	p0 = PRT0DR & 0x0C;
+	p0 = PRT0DR;
 	diff = (p0 ^ p0_old);
 	if(diff == 0x00) return;
 	

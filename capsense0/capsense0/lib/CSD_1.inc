@@ -64,8 +64,8 @@ CSD_1_HYSTERESIS:                                equ ah
 CSD_1_Debounce:                                  equ 3h
 CSD_1_LowBaselineReset:                          equ 32h
 
-CSD_1_FINGER_THRESHOLD:                          equ 50h
-CSD_1_NOISE_THRESHOLD:                           equ 32h
+CSD_1_FINGER_THRESHOLD:                          equ 41h
+CSD_1_NOISE_THRESHOLD:                           equ 2dh
 CSD_1_NEGATIVE_NOISE_THRESHOLD:                  equ 14h
 CSD_1_BASELINE_UPDATE_THRESHOLD:                 equ c8h
 

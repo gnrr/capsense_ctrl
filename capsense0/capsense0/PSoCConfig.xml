@@ -1,6 +1,6 @@
 <PSOC_DEVICE_DB>
 	<PSOC_CONFIG_LIST>
-		<PSOC_CONFIG NAME="capsense0" BASE_DEVICE="CY8C21434MLF" SOURCE_GEN_TIME="1328465143" CONFIG_SAVE_TIME="1328465143" CONFIG_SAVE_DATE="Mon Feb 06 03:05:43 2012
+		<PSOC_CONFIG NAME="capsense0" BASE_DEVICE="CY8C21434MLF" SOURCE_GEN_TIME="1328625339" CONFIG_SAVE_TIME="1328625339" CONFIG_SAVE_DATE="Tue Feb 07 23:35:39 2012
 " VERSION="4.0" DESCRIPTION="" PACKAGE_TYPE="MLF" PACKAGE_SHAPE="4" LOOP_CONFIG_INIT="Enable" UM_INT_GEN_CONTROL="Disable" CONFIG_NAME_PREPEND="Enable" DESIGN_VERSION="" DOC_FILENAME="" DEVICE_DISPLAY_NAME="CY8C21434-24LFXI" PSOC_EXPRESS_PROJECT="FALSE">
 			<DESIGN_FILE_LIST/>
 			<USER_MODULE_LIST>
@@ -93,7 +93,7 @@
 						<PARAMETER NAME="DiplexUsed" VALUE="0"/>
 						<PARAMETER NAME="Feedback Resistor Pin" VALUE="P3[1]"/>
 						<PARAMETER NAME="Feedback Resistor Pin Choices" VALUE="P1[1],P3[1],P1[5],P1[4],P1[0],P3[0]"/>
-						<PARAMETER NAME="FingerThreshold" VALUE="80"/>
+						<PARAMETER NAME="FingerThreshold" VALUE="65"/>
 						<PARAMETER NAME="GroupTable" VALUE="; Group Table:
 ;    Origin    Count    Diplex?    DivBtwSw(wholeMSB, wholeLSB, fractByte)
  db   0x0,      0x02,	 0x00,	 0x00,	 0x00,	 0x00 ; Buttons
@@ -107,7 +107,7 @@
 						<PARAMETER NAME="Modulator Capacitor Pin" VALUE="P0[1]"/>
 						<PARAMETER NAME="Modulator Capacitor Pin Choices" VALUE="P0[1],P0[3]"/>
 						<PARAMETER NAME="NegativeNoiseThreshold" VALUE="20"/>
-						<PARAMETER NAME="NoiseThreshold" VALUE="50"/>
+						<PARAMETER NAME="NoiseThreshold" VALUE="45"/>
 						<PARAMETER NAME="Ref Value" VALUE="2"/>
 						<PARAMETER NAME="Reference" VALUE="VBG"/>
 						<PARAMETER NAME="Resolution" VALUE="12"/>
@@ -223,7 +223,7 @@
 			<USER_MODULE_GROUP_LIST/>
 			<DEVICE_DATA>
 				<GLOBAL_RESOURCE_LIST>
-					<RESOURCE NAME="CPU_Clock" VALUE="SysClk/1"/>
+					<RESOURCE NAME="CPU_Clock" VALUE="SysClk/2"/>
 					<RESOURCE NAME="LVDThrottleBack" VALUE="Disable"/>
 					<RESOURCE NAME="Power Setting [ Vcc / SysClk freq ]" VALUE="5.0V / 24MHz"/>
 					<RESOURCE NAME="Sleep_Timer" VALUE="512_Hz"/>
